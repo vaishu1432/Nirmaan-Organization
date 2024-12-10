@@ -1,26 +1,28 @@
-package Day9;
+package day13;
 
-public class Main {
-	
-	String stuName;
-	int rollNo;
-	Main(String stuName,int rollno){
-		//this.stuName = stuName;
-		//this.rollno = rollNo;
-	}
-
-	public static void main(String args[]) {
-		Calculator Calc=new Calculator();
-		Main s=new Main("Anitha",1001);
-		System.err.println(s.stuName);
-		System.out.println(s.rollNo);
-		Calculator calc = new Calculator();
-		Calc.Addition(10, 20);
-		Calc.Subtraction(10, 20);
-		Calc.Multiplication(10, 20);
-		Calc.Divition(10, 20);
-		Calc.Moduls(10, 20);
+class Animals {
+void sound () {
+	System.out.println("This animal makes a sound");
+}
+}
+class Dog extends Animals {
+	void makesound() {
+		System.out.println("The dog barks");
 	}
 }
 
+class Cat extends Animals {
+	void makesound () {
+		System.out.println("The cat meows");
+	}
+}
 
+public class Main {
+	public static void main(String[]args) {
+		
+		Dog D=new Dog();
+		Cat C=new Cat();
+		D.makesound();
+		C.makesound();
+	}
+}
